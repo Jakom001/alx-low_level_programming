@@ -1,47 +1,43 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - Prints numbers between 00 to 99
- *
+ * main - Entry point
+ * Description: prints all combination of 2-digit numbers
  * Return: Always 0
  */
 int main(void)
 {
-	int i, j, k, h, op1, op2;
+	int c, i, k, j;
 
-	i = j = k = h = 48;
-	while (h < 58)
+	for (c = 48; c <= 57; c++)
 	{
-		k = 48;
-		while (k < 58)
+		for (i = 48; i <= 57; i++)
 		{
-			j = 48;
-			while (j < 58)
+			for (k = 48; k <= 57; k++)
 			{
-				i = 48;
-				while (i < 58)
+				for (j = 48; j <= 57; j++)
 				{
-					op1 = (h * 10) + k;
-					op2 = (j * 10) + i;
-					if (op1 < op2)
+				if (((k + j) > (c + i) && k >= c) || c < k)
+				{
+					putchar(c);
+					putchar(i);
+					putchar(' ');
+					putchar(k);
+					putchar(j);
+
+					if (c + i + k + j == 227 && c == 57)
 					{
-						putchar(h);
-						putchar(k);
-						putchar(' ');
-						putchar(j);
-						putchar(i);
-						if (h == 57 && k == 56 && j == 57 && i == 57)
-							break;
+						break;
+					}
+						else
+						{
 						putchar(',');
 						putchar(' ');
+						}
 					}
-					i++;
 				}
-				j++;
 			}
-			k++;
 		}
-		h++;
 	}
 	putchar('\n');
 	return (0);
