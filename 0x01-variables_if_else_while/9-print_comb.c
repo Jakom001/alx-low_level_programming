@@ -1,21 +1,22 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - print all possible commbination of single-digit numbers
+ * main - print combination of single digit numbers
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
-	int num;
+	int i;
 
-	for (num = 48; num < 58; num++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		putchar(num);
-		if (num != 57)
+		putchar(i);
+
+		if (i != '9')
 		{
 			putchar(',');
-			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
