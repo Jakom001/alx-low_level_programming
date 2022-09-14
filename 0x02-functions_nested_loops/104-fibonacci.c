@@ -37,8 +37,8 @@ int main(void)
 	{
 		if (f1o > 0)
 			printf("%lu", f1o);
-		initials = numLength(mx) - 1 - numLength(f1);
-		while (f10 > 0 && initials > 0)
+		initials = numlength(mx) - 1 - numlength(f1);
+		while (f1o > 0 && initials > 0)
 		{
 			printf("%i", 0);
 			initials--;
@@ -55,11 +55,8 @@ int main(void)
 		if (i != 98)
 			printf(", ");
 		else
-			print("\n");
+			printf("\n");
 		i++;
 	}
 	return (0);
 }
-
-
-
