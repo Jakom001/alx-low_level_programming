@@ -1,38 +1,29 @@
 #include "main.h"
 
 /**
- * times_table - Entry point
- * Description: Prints the 9 time table
+ * times_table -print the 9 times table
  *
  * Return: Always 0
  */
 void times_table(void)
 {
-	int r, c, d;
+	int a, b, op;
 
-	for (r = 0; r <= 9; r++)
+	for (b = 1; b <= 9; b++)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		for (c = 1; c <= 9; c++)
+		op = a + b;
+		_putchar(44);
+		_putchar(32);
+		if (op <= 9)
 		{
-			d = (r * c);
-			if ((d / 10) > 0)
-			{
-			_putchar((d / 10) + '0');
-			}
-			else
-			{
-			_putchar(' ');
-			}
-			_putchar((d % 10) + '0');
-			if (c < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			_putchar(32);
+			_putchar(op + 48);
 		}
-		-putchar('\n');
+		else
+		{
+			_putchar((op / 10) + 48);
+			_putchar((op % 10) + 48);
+		}
+		_putchar('\n');
 	}
 }
