@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * string_touper - changes all lowercase letters of a string to uppercase
+ * string_toupper - changes all lowercase letters of a string to uppercase
  * @st: input string
  *
  * Return: the pointer to dest
  */
-char *string_touper(char *st)
+char *string_toupper(char *st)
 {
 	int j = 0;
 
