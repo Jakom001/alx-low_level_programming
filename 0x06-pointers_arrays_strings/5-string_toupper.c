@@ -14,7 +14,7 @@ char *string_touper(char *st)
 	{
 		if ((*(st + j) >= 97) && (*(st + j) <= 122))
 			*(st + j) = *(st + j) - 32;
-			j++;
+		j++;
 	}
 	return (st);
 }
