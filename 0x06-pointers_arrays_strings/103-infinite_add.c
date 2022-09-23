@@ -36,13 +36,15 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			add = 0;
 		if (op > 0)
-			*(r + bg) = '0';
+			*(r + g) = '0';
 		if (c > 0)
 			c--, d = *(n1 + c) - 48;
 		else
 			d = 0;
 		if (b > 0)
 			b--, h = *(n2 + b) - 48;
+		else
+			d = 0;
 		g--, size_r--;
 	}
 	if (*(r) == '0')
