@@ -28,14 +28,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	r[g + 1] = '\0';
 	c--, b--, size_r--;
 	d = *(n1 + c) - 48, h = *(n2 + b) - 48;
-	while (bg >= 0)
+	while (g >= 0)
 	{
 		p = d + h + add;
 		if (p >= 10)
 			add = p / 10;
 		else
 			add = 0;
-		if (op > 0)
+		if (p > 0)
 			*(r + g) = '0';
 		if (c > 0)
 			c--, d = *(n1 + c) - 48;
@@ -50,5 +50,4 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (*(r) == '0')
 		return (r + 1);
 	else
-		return (r);
-}
+		return (r);}
